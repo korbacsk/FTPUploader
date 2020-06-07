@@ -137,13 +137,8 @@ public class MainFragment extends Fragment implements FilesAdapter.OnItemClickLi
                         while (currentItem < count) {
                             Uri fileUri = data.getClipData().getItemAt(currentItem).getUri();
 
-                            String filePath = FileHelper.getRealPathFromURI_API19(getContext(), fileUri);
+                            files.add(getFileDataFromUri(fileUri));
 
-                            String[] filePathSegments = filePath.split("/");
-                            String filename=filePathSegments[(filePathSegments.length-1)];
-
-                            fileData = new FileData(filename, fileUri, filePath, FileState.NEED_UPLOAD, null);
-                            files.add(fileData);
 
                             currentItem = currentItem + 1;
                         }
@@ -153,13 +148,7 @@ public class MainFragment extends Fragment implements FilesAdapter.OnItemClickLi
 
                         Uri fileUri = data.getData();
 
-                        String filePath = FileHelper.getRealPathFromURI_API19(getContext(), fileUri);
-
-                        String[] filePathSegments = filePath.split("/");
-                        String filename=filePathSegments[(filePathSegments.length-1)];
-
-                        fileData = new FileData(filename, fileUri, filePath, FileState.NEED_UPLOAD, null);
-                        files.add(fileData);
+                        files.add(getFileDataFromUri(fileUri));
 
                     }
 
@@ -173,9 +162,20 @@ public class MainFragment extends Fragment implements FilesAdapter.OnItemClickLi
 
     }
 
+    private FileData getFileDataFromUri(Uri fileUri) {
+        FileData fileData;
+        String filePath = FileHelper.getRealPathFromURI_API19(getContext(), fileUri);
+
+        String[] filePathSegments = filePath.split("/");
+        String filename = filePathSegments[(filePathSegments.length - 1)];
+
+        fileData = new FileData(filename, fileUri, filePath, FileState.NEED_UPLOAD, null);
+
+        return fileData;
+    }
+
 
     private void initLayout() {
-
         linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerViewFiles.setLayoutManager(linearLayoutManager);
         recyclerViewFiles.addItemDecoration(new FilesMarginDecoration(getContext()));

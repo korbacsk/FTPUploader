@@ -156,7 +156,7 @@ public class MainViewModel extends AndroidViewModel {
                             setProcessedFilesCountInSession((getProcessedFilesCountInSession() + 1));
                             fileData.setFileState(FileState.UPLOADING);
                             setFiles(files, false);
-                            Thread.sleep(3000);
+                            //Thread.sleep(3000);
 
                             file = new File(String.valueOf(fileData.getPath()));
 
