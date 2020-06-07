@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">FTP Uploader</string>
+    <string name="permission__read_external_storage">A feltöltendő fájlok kiválasztásához kérlek engedélyezt a hozzáférést a telefon tárhelyéhez.</string>
+
+    <string name="dialog__need_permission_title">Engedély szükséges</string>
+    <string name="dialog__need_permission_message">A feltöltendő fájlok kiválasztásához kérlek engedélyezt a hozzáférést a telefon tárhelyéhez.</string>
+    <string name="dialog__need_permission_button_ok">OK</string>
+
+    <string name="dialog__error__file_not_selected_title">Hiba</string>
+    <string name="dialog__error__file_not_selected_message">Válassz ki legalább egy fájlt.</string>
+    <string name="dialog__error__file_not_selected_button_ok">OK</string>
+
+    <string name="dialog__error__empty_field_title">Hiba</string>
+    <string name="dialog__error__empty_field_message_host">Üresen hagyott mező: Host</string>
+    <string name="dialog__error__empty_field_message_username">Üresen hagyott mező: User</string>
+    <string name="dialog__error__empty_field_message_password">Üresen hagyott mező: Password</string>
+    <string name="dialog__error__empty_field_button_ok">OK</string>
+
+    <string name="dialog__error__ftp_title">Hiba</string>
+    <string name="dialog__error__ftp_message_connection_failed">Nem sikerült csatlakozni a megadott host-hoz: %s</string>
+    <string name="dialog__error__ftp_message_upload_failed">Feltöltés hiba: %s</string>
+
+    <string name="dialog__error__ftp_button_ok">OK</string>
+
+
+    <string name="dialog__success_upload_title">Sikeres feltöltés</string>
+    <string name="dialog__success_upload_message">A fájlok sikeresen feltöltésre kerültek.</string>
+    <string name="dialog__success_upload_button_ok">OK</string>
+
+    <string name="fragment_main__label_host">Host</string>
+    <string name="fragment_main__label_user">User</string>
+    <string name="fragment_main__label_password">Password</string>
+    <string name="fragment_main__placeholder_error_info">Error üzenet</string>
+    <string name="fragment_main__button_choose_files">Fájlok kiválasztása...</string>
+
+    <string name="fragment_main__file_chooser_title">Fájlok kiválasztása</string>
+
+    <string name="fragment_main__button_upload">Feltöltés</string>
+
+    <string name="fragment_main__upload_in_progress">Fájlok feltöltése... %s/%s</string>
+
+    <string name="fragment_main__upload_status_success">Sikeres feltöltés (%s/%s)</string>
+
+    <string name="fragment_main__file_item__placeholder_filename">Filename</string>
+    <string name="fragment_main__file_item__placeholder_error">Error Message</string>
+
+
+
+</resources>
